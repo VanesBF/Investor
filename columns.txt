@@ -1,0 +1,33 @@
+
+
+- agefirstfunding_year – quantitative
+- agelastfunding_year – quantitative
+- relationships – quantitative
+- funding_rounds – quantitative
+- fundingtotalusd – quantitative
+- milestones (les jalons, dans le contexte des startups, sont effectivement des points dans le temps sur la ligne de temps de l'entreprise avant un événement ou un objectif futur.
+  Ces points dans le temps sont généralement des points déterminants dans l'histoire de l'entreprise.)
+- agefirstmilestone_year – quantitative
+- agelastmilestone_year – quantitative
+
+
+
+- state – categorical
+- industry_type – categorical
+- has-vc (Capital risque)
+- has_angel – categorical (est une personne très fortunée qui apporte un soutien financier à de petites entreprises en démarrage.)
+- has_roundA – categorical(Le terme "financement de premier tour" désigne le financement qu'une startup ou une autre jeune entreprise privée reçoit de la part d'investisseurs privés ou de capital-risqueurs.
+- has_roundB – categorical(lorsque l'entreprise a franchi certaines étapes dans le développement de ses activités et a dépassé le stade initial de démarrage.)
+- has_roundC – categorical()
+- has_roundD – categorical()
+
+La série C est souvent le dernier tour de table qu'une entreprise lève, bien que certaines continuent à lever des fonds de série D et même de série E - ou au-delà. Cependant, il est plus courant qu'un tour de table
+de série C soit la dernière étape pour préparer une entreprise à son introduction en bourse ou à une acquisition.
+
+
+- status(acquired/closed) - catégorique (la variable cible, si une startup est 'acquise' par une autre organisation, cela signifie que la startup a réussi) 
+
+
+
+
+

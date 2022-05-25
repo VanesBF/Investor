@@ -1,0 +1,8 @@
+
+1- Formuler le pb (rencontrer les gens metié)
+2- Collecte des données (Kaggle, données perso)
+3- Nettoyer ses données (Jupyter Nb, google collab) !important
+4- Analyse exploratoire pour comprendre les données, Visualisation des données (MatplotLib, powerBI...)
+5- Appliquer le model (se basant sur le ML) .pkl
+6- Deploiement du model, l'integrer dans une app web (Flask, Django...) VS Code, PyCharm
+7- Deploiement du model sur le cloud (AWS, Goolgle cloud, Heznert cloud)
