@@ -1,49 +1,71 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>Crédit App</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  
-</head>
+    <head>
+      <meta charset="UTF-8">
+      <title>Investor App</title>
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
 
-<body>
- <div class="login">
-	<h1>Investor App</h1>
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>
+    </head>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Credit_history" placeholder="Credit_history" required="required" />
-        <input type="text" name="Married" placeholder="Married" required="required" />
-		<input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
-        <input type="text" name="CoppalicantIncome" placeholder="CoppalicantIncome" required="required" />
+    <body>
+        <h1>Investor App</h1>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <table>
+                  <tr>
+                    <td><input type="text" name="age_first_funding_year" placeholder="Age first funding year" required="required" /></td>
+                    <td><input type="text" name="age_last_funding_year" placeholder="age_last_funding_year" required="required" /></td>
+                    <td><input type="text" name="relationships" placeholder="relationships" required="required" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="funding_rounds" placeholder="funding_rounds" required="required" /></td>
+                    <td><input type="text" name="funding_total_usd" placeholder="funding_total_usd" required="required" /></td>
+                    <td><input type="text" name="milestones" placeholder="milestones" required="required" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="age_first_milestone_year" placeholder="age_first_milestone_year" required="required" /></td>
+                    <td><input type="text" name="age_last_milestone_year" placeholder="age_last_milestone_year" required="required" /></td>
+                    <td><input type="text" name="has_VC" placeholder="has_VC" required="required" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="has_angel" placeholder="has_angel" required="required" /></td>
+                    <td><input type="text" name="has_roundA" placeholder="has_roundA" required="required" /></td>
+                    <td><input type="text" name="has_roundB" placeholder="has_roundB" required="required" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="has_roundC" placeholder="has_roundC" required="required" /></td>
+                    <td><input type="text" name="has_roundD" placeholder="has_roundD" required="required" /></td>
+                    <td><input type="text" name="state_code" placeholder="state_code" required="required" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="city" placeholder="city" required="required" /></td>
+                    <td><input type="text" name="industry_type" placeholder="industry_type" required="required" /></td>
+                    <td></td>
+                  </tr>
+            </table>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
 
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
-
-
-</body>
+       <br>
+       <br>
+       {{ prediction_text }}
+    </body>
 </html>
